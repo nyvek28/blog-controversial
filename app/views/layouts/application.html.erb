@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Controversial</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+	<nav class = 'white be-red large-padding'>
+		<ul class = 'no-list row center-xs middle-xs'>
+			<li class = 'col-md'>
+				<h2 class = 'no-margin' id = 'logo'>Controversial</h2>
+			</li>
+			<li class = 'col-md'>
+				<%= link_to 'Home', root_path%>
+			</li>
+			<li class = 'col-md'>
+				<%= link_to 'Design', root_path%>
+			</li>
+			<li class = 'col-md'>
+				<%= link_to 'Prog', root_path%>
+			</li>
+			<li class = 'col-md'>
+				<%= link_to 'Tech', root_path%>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
