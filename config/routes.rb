@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  #get 'welcome/index'
+
+  resources :articles
+
+  # Para los metodos http:
+  #   get '/articles' index
+  #   post '/articles' create
+  #   delete '/articles' delete
+  #   get '/articles/:id' show
+  #   get '/articles/new' new
+  #   get '/articles/:id/edit' edit
+  #   patch '/articles/:id' update
+  #   put '/articles/:id' update
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
