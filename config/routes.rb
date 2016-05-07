@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Para los metodos http:
   #   get '/articles' index
   #   post '/articles' create
-  #   delete '/articles' delete
+  #   delete '/articles/:id' delete
   #   get '/articles/:id' show
   #   get '/articles/new' new
   #   get '/articles/:id/edit' edit
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'articles#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
