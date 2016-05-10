@@ -1,0 +1,18 @@
+<div class="">
+  <h1><%=link_to article.title, article %></h1>
+  <div>
+  	<%= article.body %>
+  </div>
+  <br>
+  <% unless article.user != current_user%>
+    <div class="">
+    	<%= link_to 'Edit', edit_article_path(article)%>
+    	- <%= link_to 'Delete', article, method: :delete, class: 'red' %>
+    </div>
+  <%end%>
+  <%unless article.user.nil?%>
+  	<div>
+  		<blockquote><%= article.user.email %></blockquote>
+  	</div>
+  <%end%>
+</div>
