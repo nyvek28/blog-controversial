@@ -1,1 +1,15 @@
 <%= render partial: 'display', :locals => { :article => @article} %>
+<div class="field">
+  <h3>Comments</h3>
+  <%= render 'comments/form'%>
+  <div class="">
+    <% @article.comments.each do |c| %>
+      <div class="">
+        <h4><%=c.user.email%> says:</h4>
+        <blockquote>
+            <%=c.body%>
+        </blockquote>
+      </div>
+    <%end%>
+  </div>
+</div>

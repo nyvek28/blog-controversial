@@ -4,6 +4,8 @@ class Article < ActiveRecord::Base
 	validates :body, presence: true
 	before_create :set_visits_count
 
+	has_many :comments
+
 	def set_visits_count
 		self.visits_count = 0
 	end
