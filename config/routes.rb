@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :comments
+  
   devise_for :users
-  #get 'welcome/index'
-
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 
   # Para los metodos http:
   #   get '/articles' index
