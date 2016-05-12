@@ -1,5 +1,8 @@
 <div class="">
   <h1><%=link_to article.title, article %></h1>
+  <div class="">
+    <p>Visits: <%= article.visits_count %></p>
+  </div>
   <div>
   	<%= article.body %>
   </div>
